@@ -48,6 +48,12 @@ public class CounterController {
     return ApiResponse.ok(count);
   }
 
+  
+  @PostMapping(value = "/receiveMsg")
+  ApiResponse receiveMsg() {
+    logger.info("/receiveMsg get request");
+    return ApiResponse.ok("ok");
+  }
 
   /**
    * 更新计数，自增或者清零
